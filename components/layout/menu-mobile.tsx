@@ -73,14 +73,16 @@ export default function MenuMobile({ links, contactHref }: MenuMobileProps) {
                                 ))}
                             </ul>
                         </nav>
+                        <div className="flex justify-center">
                         <SheetClose
                             nativeButton={false}
                             render={<Link href={contactHref} />}
-                            className="mt-5 flex min-h-12 items-center justify-center gap-2 rounded-xl bg-signal px-4 py-3.5 text-sm font-medium text-offwhite outline-none transition-colors hover:bg-signal/90 focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-4 motion-reduce:transition-none sm:hidden"
+                            className="mt-5 flex min-h-12 w-max items-center justify-center gap-2 rounded-xl bg-signal px-4 py-3.5 text-sm font-medium text-offwhite outline-none transition-colors hover:bg-signal/90 focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-4 motion-reduce:transition-none sm:hidden"
                         >
-                            <WhatsAppIcon aria-hidden="true" className="size-5" />
-                            Entre em Contato
+                            <WhatsAppIcon aria-hidden="true" className="size-4.5" />
+                            <span>Entre em Contato</span>
                         </SheetClose>
+                        </div>
                     </div>
                 </Container>
             </SheetContent>
