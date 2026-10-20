@@ -1,29 +1,43 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
+/* FONTES */
 @theme inline {
-  /* Fontes */
   --font-sans: var(--font-inter);
   --font-display: var(--font-sora);
 }
 
+/* IDENTIDADE VISUAL */
 @theme {
-  /* Identidade visual */
   --color-signal: #3366FF;
   --color-forge: #FF8A4C;
   --color-graphite: #0C111D;
   --color-offwhite: #F7F8FA;
   --color-slate: #667085;
-
-  /* Cores semânticas */
   --color-background: #FFFFFF;
-
-  /* Bordas */
-  --radius-button: 0.625rem;
-
-  /* Sombras */
-  --shadow-soft: 0 8px 24px rgb(12 17 29 / 0.06);
 }
 
+/* SHADCN/UI - CORES DOS COMPONENTES */
+@theme {
+  --color-foreground: #0C111D;
+
+  --color-primary: #3366FF;
+  --color-primary-foreground: #FFFFFF;
+
+  --color-border: #E4E7EC;
+  --color-ring: #3366FF;
+
+  --color-muted-foreground: #667085;
+
+  --color-accent: #F7F8FA;
+  --color-accent-foreground: #0C111D;
+
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #0C111D;
+}
+
+/* ESTILOS GLOBAIS */
 body {
   background-color: var(--color-background);
   color: var(--color-graphite);
