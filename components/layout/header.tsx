@@ -15,7 +15,7 @@ const contactHref = '#';
 
 export default function Header() {
     return (
-        <header className="sticky top-0 z-60 flex h-20 items-center border-b border-[#E4E4E4] bg-background shadow-[0_4px_14px_rgba(0,0,0,0.06)] lg:relative">
+        <header className="fixed inset-x-0 top-0 z-60 flex h-20 items-center border-b border-[#E4E4E4] bg-background shadow-[0_4px_14px_rgba(0,0,0,0.06)]">
             <Container>
                 <nav aria-label="Navegação principal" className="flex items-center justify-between gap-4">
                     <Link
