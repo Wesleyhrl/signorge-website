@@ -1,0 +1,19 @@
+.glows {
+  background-image:
+    radial-gradient(
+      ellipse clamp(220px, 38vw, 760px) 280px at 50% -80px,
+      color-mix(in srgb, var(--color-signal) 15%, transparent) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse clamp(160px, 28vw, 420px) 240px at 0% -60px,
+      color-mix(in srgb, var(--color-signal) 15%, transparent) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse clamp(160px, 28vw, 420px) 240px at 100% -60px,
+      color-mix(in srgb, var(--color-signal) 15%, transparent) 0%,
+      transparent 100%
+    );
+  background-repeat: no-repeat;
+}
