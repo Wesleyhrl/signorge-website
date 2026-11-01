@@ -10,31 +10,31 @@
 
 /* IDENTIDADE VISUAL */
 @theme {
-  --color-signal: #3366FF;
-  --color-forge: #FF8A4C;
-  --color-graphite: #0C111D;
-  --color-offwhite: #F7F8FA;
+  --color-signal: #3366ff;
+  --color-forge: #ff8a4c;
+  --color-graphite: #0c111d;
+  --color-offwhite: #f7f8fa;
   --color-slate: #667085;
-  --color-background: #FFFFFF;
+  --color-background: #ffffff;
 }
 
 /* SHADCN/UI - CORES DOS COMPONENTES */
 @theme {
-  --color-foreground: #0C111D;
+  --color-foreground: #0c111d;
 
-  --color-primary: #3366FF;
-  --color-primary-foreground: #FFFFFF;
+  --color-primary: #3366ff;
+  --color-primary-foreground: #ffffff;
 
-  --color-border: #E4E7EC;
-  --color-ring: #3366FF;
+  --color-border: #e4e7ec;
+  --color-ring: #3366ff;
 
   --color-muted-foreground: #667085;
 
-  --color-accent: #F7F8FA;
-  --color-accent-foreground: #0C111D;
+  --color-accent: #f7f8fa;
+  --color-accent-foreground: #0c111d;
 
-  --color-popover: #FFFFFF;
-  --color-popover-foreground: #0C111D;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0c111d;
 }
 
 /* ESTILOS GLOBAIS */
