@@ -1,4 +1,3 @@
-
 const sizes = {
   8: "size-2",
   12: "size-3",
@@ -13,8 +12,6 @@ const colors = {
   offwhite: "bg-offwhite",
   slate: "bg-slate",
 } as const;
-
-
 
 type DiamondMarkerProps = {
   size: keyof typeof sizes;
