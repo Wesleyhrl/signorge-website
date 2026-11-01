@@ -36,7 +36,7 @@ export default function Header() {
                             alt=""
                             width={200}
                             height={43}
-                            preload={true}
+                            loading="eager"
                             className="hidden h-auto w-42.5 sm:block lg:w-50"
                         />
                     </Link>
