@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/hero/hero";
+import Services from "@/components/sections/services/services";
 import Header from "./../components/layout/header";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
+      <Services />
     </main>
   );
 }

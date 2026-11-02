@@ -1,10 +1,3 @@
-const sizes = {
-  8: "size-2",
-  12: "size-3",
-  16: "size-4",
-  20: "size-5",
-} as const;
-
 const colors = {
   signal: "bg-signal",
   forge: "bg-forge",
@@ -14,18 +7,18 @@ const colors = {
 } as const;
 
 type DiamondMarkerProps = {
-  size: keyof typeof sizes;
   color: keyof typeof colors;
+  className?: string;
 };
 
 export function DiamondMarker({
-  size = 8,
   color = "forge",
+  className = "size-2",
 }: DiamondMarkerProps) {
   return (
     <span
       aria-hidden="true"
-      className={`inline-block shrink-0 rotate-45 rounded-xs ${sizes[size]} ${colors[color]}`}
+      className={`inline-block shrink-0 rotate-45 rounded-xs ${colors[color]} ${className}`}
     />
   );
 }
