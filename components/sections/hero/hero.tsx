@@ -1,17 +1,8 @@
-import Image from "next/image";
 import styles from "./hero.module.css";
 import { DiamondMarker } from "@/components/shared/diamond-marker";
 import { Container } from "@/components/layout/container";
 import { ButtonSite } from "@/components/shared/button-site";
-import TagHero from "@/components/sections/hero/tag-hero";
-import HeroConnections from "@/components/sections/hero/hero-connections";
-import {
-  ChartNoAxesColumnIncreasing,
-  ClipboardList,
-  ScanSearch,
-  Target,
-  UserGroup,
-} from "lucide-react";
+import HeroVisual from "@/components/sections/hero/hero-visual";
 
 export default function Hero() {
   return (
@@ -27,7 +18,7 @@ export default function Hero() {
         className=" pointer-events-none absolute inset-x-0 top-0 h-107.75 bg-[url('/decorations/dot-grid.svg')] bg-repeat-x opacity-[0.42]"
       />
       {/* Conteúdo da Hero */}
-      <div className="pt-20 relative z-10">
+      <div className="pt-18 relative z-10">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 mt-20">
             <div>
@@ -58,31 +49,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center items-center ">
-              <div className="">
-                <TagHero text="Contexto" icon={<ScanSearch />} />
-                <TagHero text="Objetivos" icon={<Target />} />
-                <TagHero
-                  text="Oportunidades"
-                  icon={<ChartNoAxesColumnIncreasing />}
-                />
-                <TagHero text="Necessidades" icon={<ClipboardList />} />
-                <TagHero text="Público" icon={<UserGroup />} />
-                <HeroConnections
-                  className="w-112.75 h-auto"
-                  aria-hidden="true"
-                  focusable="false"
-                />
-              </div>
-              <Image
-                src="/mockup-website.png"
-                alt="Ilustração de um site"
-                width={420}
-                height={439}
-                className="w-105 h-auto mt-15"
-                preload
-              />
-            </div>
+            <HeroVisual />
           </div>
         </Container>
       </div>
