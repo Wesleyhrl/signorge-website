@@ -10,32 +10,46 @@ import {
 import Image from "next/image";
 import styles from "./hero.module.css";
 
+const tagHeroBase = "absolute z-10 -translate-x-1/2 -translate-y-full";
+
+const heroTags = [
+  {
+    text: "Contexto",
+    icon: <ScanSearch />,
+    position: "left-[12%] top-[3%]",
+  },
+  {
+    text: "Objetivos",
+    icon: <Target />,
+    position: "left-[6%] sm:left-[2%] top-[42%]",
+  },
+  {
+    text: "Oportunidades",
+    icon: <ChartNoAxesColumnIncreasing />,
+    position: "left-[56%] top-[25%]",
+  },
+  {
+    text: "Público",
+    icon: <UserGroup />,
+    position: "left-[88%] top-[15%]",
+  },
+  {
+    text: "Necessidades",
+    icon: <ClipboardList />,
+    position: "left-[88%] sm:left-[91%] top-[60%]",
+  },
+];
+
 export default function HeroVisual() {
   return (
     <div className="flex flex-col justify-center items-center p-5 lg:p-0 lg:px-2  pb-12 md:pb-16 lg:pb-20">
       <div className="relative w-full max-w-112.75 ">
         <div className="relative z-0 w-full">
-          <div className="absolute z-10 left-[12%] top-[3%] -translate-x-1/2 -translate-y-full">
-            <TagHero text="Contexto" icon={<ScanSearch />} />
-          </div>
-          <div className="absolute z-10 left-[6%] sm:left-[2%] top-[42%] -translate-x-1/2 -translate-y-full">
-            <TagHero text="Objetivos" icon={<Target />} />
-          </div>
-
-          <div className="absolute z-10 left-[56%] top-[25%] -translate-x-1/2 -translate-y-full">
-            <TagHero
-              text="Oportunidades"
-              icon={<ChartNoAxesColumnIncreasing />}
-            />
-          </div>
-          <div className="absolute z-10 left-[88%] top-[15%] -translate-x-1/2 -translate-y-full">
-            <TagHero text="Público" icon={<UserGroup />} />
-          </div>
-
-          <div className="absolute z-10 left-[88%] sm:left-[91%] top-[60%] -translate-x-1/2 -translate-y-full">
-            <TagHero text="Necessidades" icon={<ClipboardList />} />
-          </div>
-
+          {heroTags.map((tag) => (
+            <div key={tag.text} className={`${tagHeroBase} ${tag.position}`}>
+              <TagHero text={tag.text} icon={tag.icon}></TagHero>
+            </div>
+          ))}
           <HeroConnections
             className="block w-full h-auto px-2 md:px-0 "
             aria-hidden="true"
