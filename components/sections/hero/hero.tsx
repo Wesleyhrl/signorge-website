@@ -24,7 +24,7 @@ export default function Hero() {
             <div>
               <div className="flex gap-2 items-center mb-6.5">
                 {" "}
-                <DiamondMarker color="signal" size={8} />{" "}
+                <DiamondMarker color="signal" />{" "}
                 <span className="text-slate">Desenvolvimento Web</span>
               </div>
               <div className="flex flex-col gap-10">
