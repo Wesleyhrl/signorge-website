@@ -24,7 +24,9 @@ export default function Hero() {
             <header>
               <div className="flex gap-2 items-center mb-6.5">
                 <DiamondMarker color="signal" />
-                <span className="text-slate text-sm lg:text-base">Desenvolvimento Web</span>
+                <span className="text-slate text-sm lg:text-base">
+                  Desenvolvimento Web
+                </span>
               </div>
               <div className="flex flex-col gap-10">
                 <div>
