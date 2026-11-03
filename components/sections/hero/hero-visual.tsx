@@ -42,7 +42,7 @@ const heroTags = [
 
 export default function HeroVisual() {
   return (
-    <div className="flex flex-col justify-center items-center p-5 lg:p-0 lg:px-2  pb-12 md:pb-16 lg:pb-20">
+    <div className="flex flex-col justify-center items-center p-5 lg:p-0 lg:px-2 pb-16 md:pb-20 lg:pb-24">
       <div className="relative w-full max-w-112.75 ">
         <div className="relative z-0 w-full">
           {heroTags.map((tag) => (
