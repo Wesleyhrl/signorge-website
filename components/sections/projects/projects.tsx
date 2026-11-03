@@ -7,7 +7,7 @@ export default function Projects() {
     <section
       id="projetos"
       aria-labelledby="projects-heading"
-      className="scroll-mt-24 py-16 lg:py-24"
+      className="scroll-mt-24 pb-6 mt-20 md:mt-24 lg:mt-30"
     >
       <Container>
         <header className="flex flex-col gap-4">

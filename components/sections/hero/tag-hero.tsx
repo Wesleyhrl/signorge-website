@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 type TagHeroProps = {
   text: string;
   icon: ReactNode;
-}
+};
 
 export default function TagHero({ text, icon }: TagHeroProps) {
   return (
