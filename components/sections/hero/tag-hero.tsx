@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-interface TagHeroProps {
+type TagHeroProps = {
   text: string;
   icon: ReactNode;
 }
