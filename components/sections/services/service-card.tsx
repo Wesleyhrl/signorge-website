@@ -27,11 +27,12 @@ export default function ServiceCard({
       <div className={`w-full max-w-75 shrink-0 ${featured ? "lg:w-75" : ""}`}>
         <Image
           src={image}
-          alt=""
+          alt="Ilustração de uma interface web"
           aria-hidden="true"
           width={400}
           height={300}
           className="block h-auto w-full"
+          loading="lazy"
         />
       </div>
 
