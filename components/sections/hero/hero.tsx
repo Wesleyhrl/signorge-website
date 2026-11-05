@@ -43,10 +43,12 @@ export default function Hero() {
                   negócio.
                 </p>
                 <div className="flex flex-col  sm:flex-row  gap-4 items-center">
-                  <ButtonSite variant="primary">
+                  <ButtonSite href="#" variant="primary" showChevron>
                     Fale Sobre seu Projeto
                   </ButtonSite>
-                  <ButtonSite variant="outline">Ver Projetos</ButtonSite>
+                  <ButtonSite href="#projetos" variant="outline">
+                    Ver Projetos
+                  </ButtonSite>
                 </div>
               </div>
             </header>
