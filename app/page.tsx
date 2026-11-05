@@ -3,6 +3,7 @@ import Projects from "@/components/sections/projects/projects";
 import Services from "@/components/sections/services/services";
 import Header from "./../components/layout/header";
 import Differential from "@/components/sections/differential/differential";
+import Developer from "@/components/sections/developer/developer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Services />
       <Projects />
       <Differential />
+      <Developer />
     </main>
   );
 }
