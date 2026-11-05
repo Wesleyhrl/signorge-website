@@ -4,6 +4,7 @@ import Services from "@/components/sections/services/services";
 import Header from "./../components/layout/header";
 import Differential from "@/components/sections/differential/differential";
 import Developer from "@/components/sections/developer/developer";
+import FinalCTA from "@/components/sections/final-cta/final-cta";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Differential />
       <Developer />
+      <FinalCTA />
     </main>
   );
 }
