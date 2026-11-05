@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.123077" height="522" viewBox="0 0 22.123077 522" fill="none">
+  <defs>
+    <path id="dot" d="M11.0112585 0h0.10056" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  </defs>
+  <g opacity="0.12">
+    <use href="#dot" transform="translate(0 4.84473)" opacity="0.027"/>
+    <use href="#dot" transform="translate(0 31.4897)" opacity="0.175"/>
+    <use href="#dot" transform="translate(0 58.1348)" opacity="0.324"/>
+    <use href="#dot" transform="translate(0 84.7798)" opacity="0.472"/>
+    <use href="#dot" transform="translate(0 111.425)" opacity="0.621"/>
+    <use href="#dot" transform="translate(0 138.07)" opacity="0.769"/>
+    <use href="#dot" transform="translate(0 164.715)" opacity="0.918"/>
+    <use href="#dot" transform="translate(0 191.36)" opacity="0.964"/>
+    <use href="#dot" transform="translate(0 218.005)" opacity="0.884"/>
+    <use href="#dot" transform="translate(0 244.65)" opacity="0.805"/>
+    <use href="#dot" transform="translate(0 271.295)" opacity="0.725"/>
+    <use href="#dot" transform="translate(0 297.94)" opacity="0.645"/>
+    <use href="#dot" transform="translate(0 324.585)" opacity="0.565"/>
+    <use href="#dot" transform="translate(0 351.23)" opacity="0.485"/>
+    <use href="#dot" transform="translate(0 377.875)" opacity="0.405"/>
+    <use href="#dot" transform="translate(0 404.52)" opacity="0.325"/>
+    <use href="#dot" transform="translate(0 431.165)" opacity="0.245"/>
+    <use href="#dot" transform="translate(0 457.81)" opacity="0.165"/>
+    <use href="#dot" transform="translate(0 484.455)" opacity="0.085"/>
+    <use href="#dot" transform="translate(0 511.1)" opacity="0.01"/>
+  </g>
+</svg>
