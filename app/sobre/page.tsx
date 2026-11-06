@@ -12,9 +12,7 @@ export default function Sobre() {
   return (
     <>
       <Header />
-      <main className="pt-32 pb-20 sm:pt-40">
-
-      </main>
+      <main className="pt-32 pb-20 sm:pt-40"></main>
     </>
   );
 }

@@ -1,8 +1,6 @@
 import type { SVGProps } from "react";
 
 export default function FinalCtaSymbol(props: SVGProps<SVGSVGElement>) {
-
-
   return (
     <svg
       width={720}
