@@ -31,17 +31,11 @@ export default function Footer() {
 
             <div className="flex flex-col items-start gap-1 md:items-end md:pt-1">
               <div className="flex gap-2">
-                <a
-                  href="#"
-                  aria-label="LinkedIn da Signorge"
-                >
-                  <LinkedInIcon className="size-5.5 hover:text-signal/60"/>
+                <a href="#" aria-label="LinkedIn da Signorge">
+                  <LinkedInIcon className="size-5.5 hover:text-signal/60" />
                 </a>
-                <a
-                  href="#"
-                  aria-label="WhatsApp da Signorge"
-                >
-                  <WhatsAppIcon className="size-5.5 text-signal hover:text-signal/60"/>
+                <a href="#" aria-label="WhatsApp da Signorge">
+                  <WhatsAppIcon className="size-5.5 text-signal hover:text-signal/60" />
                 </a>
               </div>
               <address className="flex flex-col gap-1 text-sm not-italic">
