@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   allowedDevOrigins: ["192.168.0.*"],
+  experimental: {
+    agentUpgrade: "security",
+  },
 };
 
 export default nextConfig;
