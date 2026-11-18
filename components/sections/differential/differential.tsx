@@ -28,8 +28,9 @@ const stepOffsets = ["lg:pt-0", "lg:pt-25.5", "lg:pt-51"];
 export default function Differential() {
   return (
     <section
+      id="diferenciais"
       aria-labelledby="differential-heading"
-      className="bg-graphite py-14.5 mt-20 md:mt-24 lg:mt-30"
+      className="bg-graphite py-14.5 mt-20 scroll-mt-24 md:mt-24 lg:mt-30"
     >
       <Container>
         <header className="flex flex-col gap-4">

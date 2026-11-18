@@ -5,10 +5,10 @@ import { Container } from "@/components/layout/container";
 import MenuMobile from "@/components/layout/menu-mobile";
 
 const navigationLinks = [
-  { label: "Serviços", href: "#" },
-  { label: "Projetos", href: "#" },
-  { label: "Diferenciais", href: "#" },
-  { label: "Sobre", href: "#" },
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Projetos", href: "/#projetos" },
+  { label: "Diferenciais", href: "/#diferenciais" },
+  { label: "Sobre", href: "/#sobre" },
 ];
 
 const contactHref = "#";
