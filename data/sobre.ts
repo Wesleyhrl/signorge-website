@@ -21,6 +21,7 @@ import { PythonIcon } from "@/components/icons/python-icon";
 import { ReactIcon } from "@/components/icons/react-icon";
 import { TailwindCssIcon } from "@/components/icons/tailwind-css-icon";
 import { TypeScriptIcon } from "@/components/icons/typescript-icon";
+import { DockerIcon } from "@/components/icons/docker";
 import reviewSentimentumImage from "../public/projects/sobre/review-sentimentum.jpg";
 import ticketFluiImage from "../public/projects/sobre/ticket-flui.jpg";
 
@@ -78,6 +79,7 @@ export const technologyGroups: TechnologyGroup[] = [
       { name: "Jest", icon: JestIcon },
       { name: "Cypress", icon: CypressIcon },
       { name: "Figma", icon: FigmaIcon },
+      { name: "Docker", icon: DockerIcon },
       { name: "AWS", icon: AwsIcon },
       { name: "CI/CD", icon: GitBranch },
     ],
