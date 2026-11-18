@@ -31,9 +31,10 @@ export default function Background() {
               de gestão de estoque para uma instituição social.
             </p>
             <p>
-              Desde então, venho ampliando meus conhecimentos por meio de
-              projetos próprios, explorando diferentes tecnologias e áreas do
-              desenvolvimento de software.
+              Atualmente, estou à frente da Signorge, meu estúdio de
+              desenvolvimento web, onde aplico e amplio meus conhecimentos
+              técnicos, explorando diferentes etapas do desenvolvimento de
+              soluções digitais.
             </p>
           </div>
         </div>
