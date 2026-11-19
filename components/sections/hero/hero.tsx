@@ -3,6 +3,8 @@ import { DiamondMarker } from "@/components/shared/diamond-marker";
 import { Container } from "@/components/layout/container";
 import { ButtonSite } from "@/components/shared/button-site";
 import HeroVisual from "@/components/sections/hero/hero-visual";
+import { AnimatedServiceText } from "@/components/sections/hero/animated-service-text";
+import { Reveal } from "@/components/motion/reveal";
 
 export default function Hero() {
   return (
@@ -21,6 +23,7 @@ export default function Hero() {
       <div className="pt-18 relative z-10">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 mt-20">
+            <Reveal delay={0.15}>
             <header>
               <div className="flex gap-2 items-center mb-6.5">
                 <DiamondMarker color="signal" />
@@ -34,7 +37,7 @@ export default function Hero() {
                     Seu negócio não precisa de mais um site.
                     <br />
                     Precisa da solução certa. <br />
-                    <span className="text-signal">Lading Page</span>
+                    <AnimatedServiceText/>
                   </h1>
                 </div>
                 <p className="text-base text-slate sm:text-lg lg:text-xl xl:text-2xl xl:leading-[1.1]">
@@ -52,7 +55,10 @@ export default function Hero() {
                 </div>
               </div>
             </header>
+            </Reveal>
+            <Reveal direction="left" delay={0.15}>
             <HeroVisual />
+            </Reveal>
           </div>
         </Container>
       </div>

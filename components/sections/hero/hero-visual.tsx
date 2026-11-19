@@ -7,7 +7,9 @@ import {
   ClipboardList,
   UserGroup,
 } from "lucide-react";
+import * as motion from "motion/react-client";
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import styles from "./hero.module.css";
 
 const tagHeroBase = "absolute z-10 -translate-x-1/2 -translate-y-full";
@@ -45,9 +47,13 @@ export default function HeroVisual() {
     <div className="flex flex-col justify-center items-center p-5 lg:p-0 lg:px-2 pb-16 md:pb-20 lg:pb-24">
       <div className="relative w-full max-w-112.75 ">
         <div className="relative z-0 w-full">
-          {heroTags.map((tag) => (
-            <div key={tag.text} className={`${tagHeroBase} ${tag.position}`}>
-              <TagHero text={tag.text} icon={tag.icon}></TagHero>
+          {heroTags.map((tag, index) => (
+            <div
+              key={tag.text}
+              className={`${tagHeroBase} ${tag.position}`}
+              style={{ "--tag-glow-delay": `${-index}s` } as CSSProperties}
+            >
+              <TagHero text={tag.text} icon={tag.icon} />
             </div>
           ))}
           <HeroConnections
@@ -58,14 +64,25 @@ export default function HeroVisual() {
         </div>
         <div className="relative z-20 mt-[-9%]">
           <div aria-hidden="true" className={styles.mockupGlow} />
-          <Image
-            src="/mockup-website.png"
-            alt="Ilustração de um site"
-            width={420}
-            height={439}
-            className="mx-auto  block w-[93%] h-auto relative z-10"
-            preload
-          />
+          <motion.div
+            className="relative z-10 motion-reduce:transform-none!"
+            initial={false}
+            animate={{ y: 0, rotate: 0 }}
+            whileInView={{
+              y: [0, -8, 0],
+              rotate: [0, 0.5, 0],
+              transition: { duration: 4.4, ease: "easeInOut", repeat: Infinity },
+            }}
+          >
+            <Image
+              src="/mockup-website.png"
+              alt="Ilustração de um site"
+              width={420}
+              height={439}
+              className="mx-auto block h-auto w-[93%]"
+              preload
+            />
+          </motion.div>
         </div>
       </div>
     </div>
