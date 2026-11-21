@@ -22,7 +22,16 @@ export default function ProjectCard({
 }: Project) {
   return (
     <Dialog>
-      <article className="relative w-full max-w-124 overflow-hidden rounded-lg bg-graphite shadow-[0_2px_12px_#00000029]">
+      <article
+        className="    relative w-full max-w-124 overflow-hidden rounded-lg bg-graphite
+    shadow-[0_2px_12px_#00000029]
+    transition-[transform,box-shadow] duration-300 ease-out
+    hover:-translate-y-1.5
+    hover:shadow-[0_18px_40px_rgba(255,138,76,0.35)]
+    focus-within:-translate-y-1.5
+    focus-within:shadow-[0_18px_40px_rgba(255,138,76,0.35)]
+    motion-reduce:transform-none motion-reduce:transition-none"
+      >
         <Image
           src={thumbnail}
           alt={thumbnailAlt}

@@ -1,3 +1,4 @@
+/* BRILHOS DO FUNDO E DO MOCKUP */
 .glows {
   background-image:
     radial-gradient(
@@ -33,4 +34,75 @@
   );
 
   filter: blur(28px);
+}
+
+/* CONEXÕES DO SVG */
+.movingDot {
+  display: none;
+}
+
+/* TAGS */
+.tag {
+  position: relative;
+}
+
+.tag::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 8px color-mix(in srgb, var(--color-signal) 40%, transparent);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* ANIMAÇÕES */
+@media (prefers-reduced-motion: no-preference) {
+  .tag::after {
+    animation: pulseTagGlow 4s ease-in-out var(--tag-glow-delay, 0s) infinite;
+  }
+
+  .staticDot {
+    display: none;
+  }
+
+  .movingDot {
+    display: inline;
+  }
+
+  .diamondRipple {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: expandRipple 1.6s ease-out infinite;
+  }
+
+  .dashedLine {
+    animation: flowToMockup 5s linear infinite;
+  }
+}
+
+/* KEYFRAMES */
+@keyframes pulseTagGlow {
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes expandRipple {
+  from {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+
+  80%,
+  to {
+    transform: scale(2.3);
+    opacity: 0;
+  }
+}
+
+@keyframes flowToMockup {
+  to {
+    stroke-dashoffset: -60;
+  }
 }

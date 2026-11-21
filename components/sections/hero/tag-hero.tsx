@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import styles from "./hero.module.css";
 
 type TagHeroProps = {
   text: string;
@@ -7,7 +8,9 @@ type TagHeroProps = {
 
 export default function TagHero({ text, icon }: TagHeroProps) {
   return (
-    <div className="flex w-max items-center justify-center gap-1 sm:gap-1.5 rounded-xl bg-white px-2 sm:px-3 py-1 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+    <div
+      className={`${styles.tag} flex w-max items-center justify-center gap-1 sm:gap-1.5 rounded-xl bg-white px-2 sm:px-3 py-1 shadow-[0_8px_24px_rgba(0,0,0,0.08)]`}
+    >
       <span className="whitespace-nowrap text-xs sm:text-base">{text}</span>
 
       <div

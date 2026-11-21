@@ -1,0 +1,23 @@
+.carousel :global(.swiper-button-prev),
+.carousel :global(.swiper-button-next) {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(12, 17, 29, 0.4);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel :global(.swiper-button-prev svg),
+.carousel :global(.swiper-button-next svg) {
+  width: 18px;
+  height: 18px;
+}
+
+.carousel :global(.swiper-button-prev) {
+  left: max(16px, calc((100% - 1200px) / 2));
+}
+
+.carousel :global(.swiper-button-next) {
+  right: max(16px, calc((100% - 1200px) / 2));
+}
