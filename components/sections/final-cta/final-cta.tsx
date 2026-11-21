@@ -1,6 +1,7 @@
 import { Container } from "@/components/layout/container";
 import { ButtonSite } from "@/components/shared/button-site";
 import FinalCtaSymbol from "./final-cta-symbol";
+import { Reveal } from "@/components/motion/reveal";
 
 export default function FinalCTA() {
   return (
@@ -25,6 +26,7 @@ export default function FinalCTA() {
 
       <div className="relative z-10">
         <Container>
+          <Reveal delay={0.15}>
           <div className="mx-auto flex items-center py-16 md:py-20 lg:min-h-130.5 lg:py-24">
             <div className="max-w-160">
               <div className="flex flex-col gap-6 md:gap-4">
@@ -48,6 +50,7 @@ export default function FinalCTA() {
               </ButtonSite>
             </div>
           </div>
+          </Reveal>
         </Container>
       </div>
     </section>
