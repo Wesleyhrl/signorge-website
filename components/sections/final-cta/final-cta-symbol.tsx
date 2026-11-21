@@ -1,12 +1,9 @@
-
 "use client";
 
 import { motion, useInView } from "motion/react";
 import { useRef, type SVGProps } from "react";
 
-export default function FinalCtaSymbol(
-  props: SVGProps<SVGSVGElement>,
-) {
+export default function FinalCtaSymbol(props: SVGProps<SVGSVGElement>) {
   const svgRef = useRef<SVGSVGElement>(null);
   const isInView = useInView(svgRef, {
     once: true,
@@ -67,7 +64,7 @@ export default function FinalCtaSymbol(
           }}
           transition={{
             duration: 0.5,
-            delay: lineDuration * 0.80,
+            delay: lineDuration * 0.8,
             ease: "easeOut",
           }}
           style={{

@@ -29,7 +29,7 @@ export default function FeaturedProjects() {
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:gap-8">
             {portfolioProjects.map((project, index) => (
               <Reveal key={project.id} delay={index * 0.1 + 0.15}>
-              <PortfolioProjectCard  project={project} />
+                <PortfolioProjectCard project={project} />
               </Reveal>
             ))}
           </div>
