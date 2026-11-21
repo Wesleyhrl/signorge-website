@@ -2,12 +2,14 @@ import Image from "next/image";
 import { Container } from "@/components/layout/container";
 import { DiamondMarker } from "@/components/shared/diamond-marker";
 import portrait from "@/public/developer.png";
+import { Reveal } from "@/components/motion/reveal";
 
 export default function Introduction() {
   return (
     <section aria-labelledby="introduction-heading" className="pt-38">
       <Container>
         <div className="mx-auto grid max-w-300 items-center gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_338px] lg:gap-16">
+          <Reveal delay={0.15}>
           <div className="min-w-0">
             <p className="mb-4 flex items-center gap-2 text-sm font-medium text-slate">
               <DiamondMarker color="forge" />
@@ -35,6 +37,8 @@ export default function Introduction() {
               </p>
             </div>
           </div>
+          </Reveal>
+          <Reveal direction="left" delay={0.15}>
           <figure className="w-full max-w-84.5 justify-self-center lg:justify-self-end">
             <Image
               src={portrait}
@@ -44,6 +48,7 @@ export default function Introduction() {
               className="h-auto w-full rounded-2xl shadow-[10px_14px_3px_#6670854c]"
             />
           </figure>
+          </Reveal>
         </div>
       </Container>
     </section>
