@@ -22,7 +22,7 @@ export default function ProjectsCarousel() {
       }}
       mousewheel={{
         forceToAxis: true,
-        sensitivity: 1
+        sensitivity: 1,
       }}
       slidesPerView="auto"
       centeredSlides

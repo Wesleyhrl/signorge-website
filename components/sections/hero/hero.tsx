@@ -24,40 +24,40 @@ export default function Hero() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 mt-20">
             <Reveal delay={0.15}>
-            <header>
-              <div className="flex gap-2 items-center mb-6.5">
-                <DiamondMarker color="signal" />
-                <span className="text-slate text-sm lg:text-base">
-                  Desenvolvimento Web
-                </span>
-              </div>
-              <div className="flex flex-col gap-10">
-                <div>
-                  <h1 className="text-3xl sm:text-4xl xl:text-5xl font-display font-semibold">
-                    Seu negócio não precisa de mais um site.
-                    <br />
-                    Precisa da solução certa. <br />
-                    <AnimatedServiceText/>
-                  </h1>
+              <header>
+                <div className="flex gap-2 items-center mb-6.5">
+                  <DiamondMarker color="signal" />
+                  <span className="text-slate text-sm lg:text-base">
+                    Desenvolvimento Web
+                  </span>
                 </div>
-                <p className="text-base text-slate sm:text-lg lg:text-xl xl:text-2xl xl:leading-[1.1]">
-                  Entendemos seu contexto, seu público e seus objetivos para
-                  construir uma solução web alinhada às necessidades do seu
-                  negócio.
-                </p>
-                <div className="flex flex-col  sm:flex-row  gap-4 items-center">
-                  <ButtonSite href="#" variant="primary" showChevron>
-                    Fale Sobre seu Projeto
-                  </ButtonSite>
-                  <ButtonSite href="#projetos" variant="outline">
-                    Ver Projetos
-                  </ButtonSite>
+                <div className="flex flex-col gap-10">
+                  <div>
+                    <h1 className="text-3xl sm:text-4xl xl:text-5xl font-display font-semibold">
+                      Seu negócio não precisa de mais um site.
+                      <br />
+                      Precisa da solução certa. <br />
+                      <AnimatedServiceText />
+                    </h1>
+                  </div>
+                  <p className="text-base text-slate sm:text-lg lg:text-xl xl:text-2xl xl:leading-[1.1]">
+                    Entendemos seu contexto, seu público e seus objetivos para
+                    construir uma solução web alinhada às necessidades do seu
+                    negócio.
+                  </p>
+                  <div className="flex flex-col  sm:flex-row  gap-4 items-center">
+                    <ButtonSite href="#" variant="primary" showChevron>
+                      Fale Sobre seu Projeto
+                    </ButtonSite>
+                    <ButtonSite href="#projetos" variant="outline">
+                      Ver Projetos
+                    </ButtonSite>
+                  </div>
                 </div>
-              </div>
-            </header>
+              </header>
             </Reveal>
             <Reveal direction="left" delay={0.15}>
-            <HeroVisual />
+              <HeroVisual />
             </Reveal>
           </div>
         </Container>

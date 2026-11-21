@@ -21,4 +21,3 @@
 .carousel :global(.swiper-button-next) {
   right: max(16px, calc((100% - 1200px) / 2));
 }
-

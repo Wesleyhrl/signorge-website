@@ -94,7 +94,8 @@
     opacity: 0.5;
   }
 
-  80%, to {
+  80%,
+  to {
     transform: scale(2.3);
     opacity: 0;
   }

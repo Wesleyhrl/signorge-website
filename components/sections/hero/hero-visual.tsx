@@ -71,7 +71,11 @@ export default function HeroVisual() {
             whileInView={{
               y: [0, -8, 0],
               rotate: [0, 0.5, 0],
-              transition: { duration: 4.4, ease: "easeInOut", repeat: Infinity },
+              transition: {
+                duration: 4.4,
+                ease: "easeInOut",
+                repeat: Infinity,
+              },
             }}
           >
             <Image
