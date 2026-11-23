@@ -23,7 +23,7 @@ export default function ProjectCard({
   return (
     <Dialog>
       <article
-        className="    relative w-full max-w-124 overflow-hidden rounded-lg bg-graphite
+        className="    relative w-full max-w-124 overflow-hidden rounded-lg
     shadow-[0_2px_12px_#00000029]
     transition-[transform,box-shadow] duration-300 ease-out
     hover:-translate-y-1.5
@@ -55,7 +55,7 @@ export default function ProjectCard({
         <DialogTrigger
           type="button"
           aria-label={`Ver projeto ${title}`}
-          className="absolute inset-0 cursor-pointer rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-inset"
+          className="absolute inset-0 cursor-pointer rounded-lg border-0 bg-transparent outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-inset"
         />
       </article>
       <DialogContent
