@@ -3,6 +3,7 @@ import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { Container } from "@/components/layout/container";
 import { Mail, MapPin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { whatsappUrl } from "@/data/contact";
 
 export default function Footer() {
@@ -41,7 +42,7 @@ export default function Footer() {
               </div>
               <address className="flex flex-col gap-1 text-sm not-italic">
                 <a
-                  href="mailto:signorge@gmail.com"
+                  href="mailto:contato.signorge@gmail.com"
                   className="flex min-h-11 items-center gap-1 rounded-sm outline-none hover:underline focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-graphite md:min-h-5.5"
                 >
                   <Mail
@@ -49,7 +50,7 @@ export default function Footer() {
                     className="size-5.5 shrink-0 text-signal"
                   />
                   <span className="min-w-0 wrap-anywhere">
-                    signorge@gmail.com
+                    contato.signorge@gmail.com
                   </span>
                 </a>
                 <p className="flex items-center gap-1">
@@ -65,12 +66,12 @@ export default function Footer() {
 
           <div className="mt-8 flex flex-col items-start gap-2 border-t border-slate/15 py-3.5 text-xs leading-4 md:flex-row md:items-center md:justify-between md:gap-4">
             <p>© 2026 Signorge. Todos os direitos reservados.</p>
-            <a
-              href="#"
+            <Link
+              href="/politica-de-privacidade"
               className="inline-flex min-h-11 items-center rounded-sm outline-none hover:underline focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-graphite md:min-h-0"
             >
               Política de Privacidade
-            </a>
+            </Link>
           </div>
         </div>
       </Container>
