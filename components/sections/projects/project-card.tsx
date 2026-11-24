@@ -59,6 +59,7 @@ export default function ProjectCard({
         />
       </article>
       <DialogContent
+        restoreFocusOnKeyboardOnly
         showCloseButton={false}
         className="flex max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-275 flex-col gap-0 overflow-hidden p-0 sm:max-w-275"
       >
