@@ -5,6 +5,7 @@ import { ButtonSite } from "@/components/shared/button-site";
 import HeroVisual from "@/components/sections/hero/hero-visual";
 import { AnimatedServiceText } from "@/components/sections/hero/animated-service-text";
 import { Reveal } from "@/components/motion/reveal";
+import { whatsappUrl } from "@/data/contact";
 
 export default function Hero() {
   return (
@@ -46,7 +47,7 @@ export default function Hero() {
                     negócio.
                   </p>
                   <div className="flex flex-col  sm:flex-row  gap-4 items-center">
-                    <ButtonSite href="#" variant="primary" showChevron>
+                    <ButtonSite href={whatsappUrl} target="_blank" variant="primary" showChevron>
                       Fale Sobre seu Projeto
                     </ButtonSite>
                     <ButtonSite href="#projetos" variant="outline">

@@ -2,6 +2,7 @@ import { Container } from "@/components/layout/container";
 import { ButtonSite } from "@/components/shared/button-site";
 import FinalCtaSymbol from "./final-cta-symbol";
 import { Reveal } from "@/components/motion/reveal";
+import { whatsappUrl } from "@/data/contact";
 
 export default function FinalCTA() {
   return (
@@ -42,7 +43,8 @@ export default function FinalCTA() {
                 </div>
                 <ButtonSite
                   className="mt-10"
-                  href="#"
+                  href={whatsappUrl}
+                  target="_blank"
                   variant="primary"
                   showChevron
                 >

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { Container } from "@/components/layout/container";
 import MenuMobile from "@/components/layout/menu-mobile";
-
+import { whatsappUrl } from "@/data/contact";
 const navigationLinks = [
   { label: "Serviços", href: "/#servicos" },
   { label: "Projetos", href: "/#projetos" },
@@ -11,7 +11,7 @@ const navigationLinks = [
   { label: "Sobre", href: "/#sobre" },
 ];
 
-const contactHref = "#";
+const contactHref = whatsappUrl;
 
 export default function Header() {
   return (
@@ -57,6 +57,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href={contactHref}
+              target="_blank"
               className="hidden min-h-12 items-center gap-1.25 rounded-xl bg-signal px-4 py-3.5 text-sm font-medium text-offwhite outline-none transition-colors hover:bg-signal/90 focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-4 motion-reduce:transition-none sm:inline-flex"
             >
               <WhatsAppIcon aria-hidden="true" className="size-4.5" />

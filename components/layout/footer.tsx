@@ -3,6 +3,7 @@ import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { Container } from "@/components/layout/container";
 import { Mail, MapPin } from "lucide-react";
 import Image from "next/image";
+import { whatsappUrl } from "@/data/contact";
 
 export default function Footer() {
   return (
@@ -34,7 +35,7 @@ export default function Footer() {
                 <a href="#" aria-label="LinkedIn da Signorge">
                   <LinkedInIcon className="size-5.5 hover:text-signal/60" />
                 </a>
-                <a href="#" aria-label="WhatsApp da Signorge">
+                <a href={whatsappUrl} aria-label="WhatsApp da Signorge">
                   <WhatsAppIcon className="size-5.5 text-signal hover:text-signal/60" />
                 </a>
               </div>
