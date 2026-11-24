@@ -24,6 +24,7 @@ import { TypeScriptIcon } from "@/components/icons/typescript-icon";
 import { DockerIcon } from "@/components/icons/docker";
 import reviewSentimentumImage from "../public/projects/sobre/review-sentimentum.jpg";
 import ticketFluiImage from "../public/projects/sobre/ticket-flui.jpg";
+import signorgeImage from "../public/projects/sobre/print-signorge.png";
 
 export type Technology = {
   name: string;
@@ -98,6 +99,26 @@ export type PortfolioProject = {
 };
 
 export const portfolioProjects: PortfolioProject[] = [
+  {
+    id: "signorge",
+    title: "Signorge",
+    description:
+      "Site institucional do em estúdio de desenvolvimento web, com planejamento, design e desenvolvimento próprios. Apresenta serviços, portfólio e trajetória profissional em uma interface responsiva, com animações e carrossel de projetos com visualização ampliada.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Motion",
+      "Docker",
+    ],
+    image: {
+      src: signorgeImage,
+      alt: "Página inicial da Signorge com apresentação do estúdio, chamadas para conhecer os projetos e ilustração de uma solução web.",
+    },
+    demoUrl: "/",
+    githubUrl: "https://github.com/Wesleyhrl/signorge-website",
+  },
   {
     id: "review-sentimentum",
     title: "Review Sentimentum",

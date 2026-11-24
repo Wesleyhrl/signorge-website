@@ -26,9 +26,13 @@ export default function FeaturedProjects() {
               </p>
             </header>
           </Reveal>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:gap-8">
+          <div className="mt-10 grid gap-6 md:auto-rows-fr md:grid-cols-2 lg:gap-8">
             {portfolioProjects.map((project, index) => (
-              <Reveal key={project.id} delay={index * 0.1 + 0.15}>
+              <Reveal
+                key={project.id}
+                delay={index * 0.1 + 0.15}
+                className="grid min-w-0"
+              >
                 <PortfolioProjectCard project={project} />
               </Reveal>
             ))}
