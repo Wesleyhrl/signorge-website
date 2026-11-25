@@ -35,7 +35,7 @@ export default function ProjectCard({
         <Image
           src={thumbnail}
           alt={thumbnailAlt}
-          sizes="(max-width: 527px) calc(100vw - 32px), 496px"
+          sizes="min(90vw, 496px)"
           loading="lazy"
           className="block h-auto w-full"
         />

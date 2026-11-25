@@ -10,6 +10,7 @@ import {
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import type { CSSProperties } from "react";
+import mockup from "@/public/mockup-website.webp";
 import styles from "./hero.module.css";
 
 const tagHeroBase = "absolute z-10 -translate-x-1/2 -translate-y-full";
@@ -79,10 +80,9 @@ export default function HeroVisual() {
             }}
           >
             <Image
-              src="/mockup-website.png"
+              src={mockup}
               alt="Ilustração de um site"
-              width={420}
-              height={439}
+              sizes="(max-width: 523px) calc(93vw - 67px), 420px"
               className="mx-auto block h-auto w-[93%]"
               preload
             />

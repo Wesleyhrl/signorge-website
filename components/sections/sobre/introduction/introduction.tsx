@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/layout/container";
 import { DiamondMarker } from "@/components/shared/diamond-marker";
-import portrait from "@/public/developer.png";
+import portrait from "@/public/developer.webp";
 import { Reveal } from "@/components/motion/reveal";
 
 export default function Introduction() {
