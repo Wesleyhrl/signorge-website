@@ -43,8 +43,7 @@ export default function PoliticaDePrivacidade() {
                 Política de Privacidade
               </h1>
               <p className="text-sm font-medium">
-                Versão para revisão, atualizada em{" "}
-                <time dateTime="2026-11-24">24/11/2026</time>
+                atualizada em <time dateTime="2026-11-25">25/11/2026</time>
               </p>
               <p>
                 Esta política explica como os dados pessoais são tratados na
@@ -107,13 +106,16 @@ export default function PoliticaDePrivacidade() {
                   um contrato do qual você seja parte.
                 </p>
                 <p>
-                  Para responder a contatos gerais e atender representantes de
-                  empresas, o legítimo interesse (art. 7º, IX, da LGPD) é a base
-                  legal em avaliação. Sua aplicação depende da necessidade do
-                  tratamento, das expectativas das pessoas envolvidas e das
-                  medidas de proteção adotadas. Quando o tratamento for exigido
-                  por uma obrigação legal ou regulatória, aplica-se o art. 7º,
-                  II, da LGPD.
+                  Para responder a contatos gerais, inclusive de representantes
+                  de empresas, a Signorge utiliza o legítimo interesse (art. 7º,
+                  IX, da LGPD). A finalidade é atender à solicitação recebida,
+                  usando apenas os dados necessários para compreender o pedido e
+                  responder. Esse uso corresponde à expectativa de quem inicia o
+                  contato. A limitação ao atendimento, o acesso restrito ao
+                  controlador e os direitos descritos nesta política ajudam a
+                  proteger as pessoas envolvidas. Quando o tratamento for
+                  exigido por uma obrigação legal ou regulatória, aplica-se o
+                  art. 7º, II, da LGPD.
                 </p>
               </section>
 
@@ -134,15 +136,45 @@ export default function PoliticaDePrivacidade() {
                   Compartilhamento e serviços de terceiros
                 </h2>
                 <p>
-                  WhatsApp e Gmail serão usados para trocar mensagens de
-                  atendimento. O site também contém links para LinkedIn, GitHub
-                  e uma demonstração externa de projeto. Ao acessar esses
+                  WhatsApp Business e Gmail serão usados para trocar mensagens
+                  de atendimento. O site também contém links para LinkedIn,
+                  GitHub e uma demonstração externa de projeto. Ao acessar esses
                   serviços, você pode consultar seus avisos de privacidade para
                   saber como cada plataforma trata dados pessoais.
                 </p>
                 <p>
-                  O papel dos fornecedores no tratamento de dados e eventuais
-                  transferências internacionais ainda estão em verificação.
+                  WhatsApp Business e Gmail podem processar ou armazenar dados
+                  fora do Brasil. O WhatsApp informa que suas operações incluem
+                  os Estados Unidos e outros países. Para as transferências de
+                  informações de contato abrangidas pelos termos do WhatsApp
+                  Business, o adendo global incorpora as cláusulas-padrão
+                  contratuais aprovadas pela ANPD. O Google informa que utiliza
+                  mecanismos de transferência, como decisões de adequação e,
+                  quando necessário, cláusulas-padrão contratuais aprovadas pela
+                  ANPD. Essas cláusulas estabelecem obrigações de proteção dos
+                  dados e respeito aos direitos dos titulares. Mais informações
+                  estão disponíveis no{" "}
+                  <a
+                    href="https://www.whatsapp.com/legal/brazil-privacy-notice?lang=pt"
+                    className={linkClassName}
+                  >
+                    aviso de privacidade do WhatsApp para o Brasil
+                  </a>
+                  , no{" "}
+                  <a
+                    href="https://www.whatsapp.com/legal/DTA?lang=pt_br"
+                    className={linkClassName}
+                  >
+                    adendo global do WhatsApp Business
+                  </a>{" "}
+                  e nas{" "}
+                  <a
+                    href="https://policies.google.com/privacy/frameworks?hl=pt-BR"
+                    className={linkClassName}
+                  >
+                    estruturas de transferência de dados do Google
+                  </a>
+                  .
                 </p>
               </section>
 
@@ -151,17 +183,19 @@ export default function PoliticaDePrivacidade() {
                   Armazenamento e segurança
                 </h2>
                 <p>
-                  As mensagens ficarão principalmente no WhatsApp e no Gmail.
-                  Quando necessário, informações do projeto poderão ser mantidas
-                  em arquivos no computador do controlador. Na Signorge, o
-                  acesso a esses registros ficará restrito a ele.
+                  As mensagens de atendimento ficam principalmente no WhatsApp
+                  Business e no Gmail. Quando necessário, informações do projeto
+                  também podem ser mantidas em arquivos no computador do
+                  controlador. Na Signorge, o acesso a esses registros é
+                  restrito ao controlador.
                 </p>
                 <p>
-                  A guarda deve se limitar ao tempo necessário ao atendimento, à
-                  execução do contrato ou às hipóteses de conservação previstas
-                  na LGPD. Os prazos por tipo de registro, os procedimentos de
-                  descarte, os backups e as medidas específicas de segurança
-                  ainda estão em definição.
+                  Os dados serão conservados pelo tempo necessário ao
+                  atendimento e à execução dos serviços ou enquanto sua
+                  conservação for permitida ou exigida por lei. Quando não
+                  houver mais necessidade nem fundamento legal para
+                  conservá-los, serão excluídos dos registros mantidos pela
+                  Signorge.
                 </p>
               </section>
 
