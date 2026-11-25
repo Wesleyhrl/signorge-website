@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Sora } from "next/font/google";
+import { siteOrigin } from "@/data/site";
 import "./globals.css";
 
 const sora = Sora({
@@ -15,7 +16,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Signorge",
+  metadataBase: new URL(siteOrigin),
+  title: {
+    default: "Signorge",
+    template: "%s | Signorge",
+  },
   description: "Soluções web para o seu negócio.",
 };
 
