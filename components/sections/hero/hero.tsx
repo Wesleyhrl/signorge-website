@@ -24,37 +24,42 @@ export default function Hero() {
       <div className="pt-18 relative z-10">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 mt-20">
-              <header>
-                <div className="flex gap-2 items-center mb-6.5">
-                  <DiamondMarker color="signal" />
-                  <span className="text-slate text-sm lg:text-base">
-                    Desenvolvimento Web
-                  </span>
+            <header>
+              <div className="flex gap-2 items-center mb-6.5">
+                <DiamondMarker color="signal" />
+                <span className="text-slate text-sm lg:text-base">
+                  Desenvolvimento Web
+                </span>
+              </div>
+              <div className="flex flex-col gap-10">
+                <div>
+                  <h1 className="text-3xl sm:text-4xl xl:text-5xl font-display font-semibold">
+                    Seu negócio não precisa de mais um site.
+                    <br />
+                    Precisa da solução certa. <br />
+                    <AnimatedServiceText />
+                  </h1>
                 </div>
-                <div className="flex flex-col gap-10">
-                  <div>
-                    <h1 className="text-3xl sm:text-4xl xl:text-5xl font-display font-semibold">
-                      Seu negócio não precisa de mais um site.
-                      <br />
-                      Precisa da solução certa. <br />
-                      <AnimatedServiceText />
-                    </h1>
-                  </div>
-                  <p className="text-base text-slate sm:text-lg lg:text-xl xl:text-2xl xl:leading-[1.1]">
-                    Entendemos seu contexto, seu público e seus objetivos para
-                    construir uma solução web alinhada às necessidades do seu
-                    negócio.
-                  </p>
-                  <div className="flex flex-col  sm:flex-row  gap-4 items-center">
-                    <ButtonSite href={whatsappUrl} target="_blank" variant="primary" showChevron>
-                      Fale Sobre seu Projeto
-                    </ButtonSite>
-                    <ButtonSite href="#projetos" variant="outline">
-                      Ver Projetos
-                    </ButtonSite>
-                  </div>
+                <p className="text-base text-slate sm:text-lg lg:text-xl xl:text-2xl xl:leading-[1.1]">
+                  Entendemos seu contexto, seu público e seus objetivos para
+                  construir uma solução web alinhada às necessidades do seu
+                  negócio.
+                </p>
+                <div className="flex flex-col  sm:flex-row  gap-4 items-center">
+                  <ButtonSite
+                    href={whatsappUrl}
+                    target="_blank"
+                    variant="primary"
+                    showChevron
+                  >
+                    Fale Sobre seu Projeto
+                  </ButtonSite>
+                  <ButtonSite href="#projetos" variant="outline">
+                    Ver Projetos
+                  </ButtonSite>
                 </div>
-              </header>
+              </div>
+            </header>
             <Reveal direction="left" delay={0.15}>
               <HeroVisual />
             </Reveal>

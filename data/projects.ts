@@ -27,7 +27,8 @@ export const projects: Project[] = [
     description:
       "Página para apresentar bolos e doces artesanais e facilitar encomendas.",
     thumbnail: claraThumbnail,
-    thumbnailAlt: "Prévia da página da Confeitaria da Clara, com um bolo de morango.",
+    thumbnailAlt:
+      "Prévia da página da Confeitaria da Clara, com um bolo de morango.",
     fullImage: claraFullImage,
     fullImageAlt:
       "Página da Confeitaria da Clara com bolos, doces e informações para encomendas.",

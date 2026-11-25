@@ -5,7 +5,8 @@ import { cn } from "cn";
 
 const variants = {
   primary: "border-signal bg-signal text-white hover:bg-signal-hover",
-  outline: "border-signal text-signal hover:bg-signal/10 hover:text-signal-hover",
+  outline:
+    "border-signal text-signal hover:bg-signal/10 hover:text-signal-hover",
 };
 
 export type ButtonSiteProps = ComponentProps<typeof Link> & {
