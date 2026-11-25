@@ -52,7 +52,7 @@ export default function Developer() {
           <Reveal direction="left" delay={0.15}>
             <figure className="relative w-full max-w-82.5 justify-self-center overflow-hidden rounded-[10px] shadow-[10px_14px_3px_#6670854c] lg:justify-self-end">
               <Image
-                src="/developer.png"
+                src="/developer.webp"
                 alt="Retrato ilustrado de Wesley Henrique à mesa de trabalho com um notebook."
                 width={330}
                 height={412}

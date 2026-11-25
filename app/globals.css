@@ -11,6 +11,7 @@
 /* IDENTIDADE VISUAL */
 @theme {
   --color-signal: #3366ff;
+  --color-signal-hover: #2e5ce6;
   --color-forge: #ff8a4c;
   --color-graphite: #0c111d;
   --color-offwhite: #f7f8fa;

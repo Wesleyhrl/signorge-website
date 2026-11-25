@@ -31,7 +31,10 @@ export default function FinalCTA() {
             <div className="mx-auto flex items-center py-16 md:py-20 lg:min-h-130.5 lg:py-24">
               <div className="max-w-160">
                 <div className="flex flex-col gap-6 md:gap-4">
-                  <h2 className="font-display text-3xl leading-tight font-semibold sm:text-4xl xl:text-5xl xl:leading-none">
+                  <h2
+                    id="final-cta-heading"
+                    className="font-display text-3xl leading-tight font-semibold sm:text-4xl xl:text-5xl xl:leading-none"
+                  >
                     Seu próximo site começa com uma conversa.
                   </h2>
 

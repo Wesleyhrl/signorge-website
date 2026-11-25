@@ -24,7 +24,6 @@ export default function Hero() {
       <div className="pt-18 relative z-10">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 mt-20">
-            <Reveal delay={0.15}>
               <header>
                 <div className="flex gap-2 items-center mb-6.5">
                   <DiamondMarker color="signal" />
@@ -56,7 +55,6 @@ export default function Hero() {
                   </div>
                 </div>
               </header>
-            </Reveal>
             <Reveal direction="left" delay={0.15}>
               <HeroVisual />
             </Reveal>

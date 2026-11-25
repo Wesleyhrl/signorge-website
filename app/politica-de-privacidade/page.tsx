@@ -2,12 +2,27 @@ import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
+import { studioCard } from "@/data/site";
 
+const title = "Política de Privacidade";
+const description =
+  "Conheça o tratamento de dados pessoais no site e no atendimento da Signorge, o canal de privacidade e seus direitos pela LGPD.";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidade | Signorge",
-  description:
-    "Conheça o tratamento de dados pessoais no site e no atendimento da Signorge, o canal de privacidade e seus direitos pela LGPD.",
+  title,
+  description,
+  alternates: { canonical: "/politica-de-privacidade" },
+  openGraph: {
+    type: "website",
+    siteName: "Signorge",
+    locale: "pt_BR",
+    url: "/politica-de-privacidade",
+    images: [studioCard],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [studioCard],
+  },
 };
 
 const privacyEmail = "contato.signorge@gmail.com";

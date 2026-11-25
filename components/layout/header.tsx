@@ -58,7 +58,7 @@ export default function Header() {
             <Link
               href={contactHref}
               target="_blank"
-              className="hidden min-h-12 items-center gap-1.25 rounded-xl bg-signal px-4 py-3.5 text-sm font-medium text-offwhite outline-none transition-colors hover:bg-signal/90 focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-4 motion-reduce:transition-none sm:inline-flex"
+              className="hidden min-h-12 items-center gap-1.25 rounded-xl bg-signal px-4 py-3.5 text-sm font-medium text-white outline-none transition-colors hover:bg-signal-hover focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-4 motion-reduce:transition-none sm:inline-flex"
             >
               <WhatsAppIcon aria-hidden="true" className="size-4.5" />
               <span>Entre em Contato</span>
