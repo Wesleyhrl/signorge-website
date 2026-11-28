@@ -1,0 +1,123 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: signorge-ghcr-main
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      packages: write
+    env:
+      IMAGE: ghcr.io/wesleyhrl/signorge-website
+
+    steps:
+      - name: Check out the commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Lint
+        run: |
+          npm ci --no-audit --no-fund
+          npm run lint
+
+      - name: Log in to Docker Hardened Images
+        uses: docker/login-action@8aa5831fb8d48d8f76594c7ddde61ae58019f550 # v4.8.0
+        with:
+          registry: dhi.io
+          username: ${{ secrets.DHI_USERNAME }}
+          password: ${{ secrets.DHI_TOKEN }}
+
+      - name: Build the ARM64 image
+        run: |
+          docker buildx build --platform linux/arm64 --load \
+            --tag "$IMAGE:$GITHUB_SHA" \
+            --label "org.opencontainers.image.source=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" \
+            .
+
+      - name: Smoke test the image
+        shell: bash
+        run: |
+          platform="$(docker image inspect --format '{{.Os}}/{{.Architecture}}' "$IMAGE:$GITHUB_SHA")"
+          if [[ "$platform" != linux/arm64 ]]; then
+            echo "Expected a linux/arm64 image, got $platform" >&2
+            exit 1
+          fi
+
+          container=signorge-smoke-test
+          base_url=http://127.0.0.1:3000
+          home_html="$(mktemp)"
+          cleanup() {
+            local status=$?
+            if (( status != 0 )); then
+              docker logs "$container" || true
+            fi
+            docker rm --force "$container" >/dev/null 2>&1 || true
+            rm -f "$home_html"
+          }
+          trap cleanup EXIT
+
+          docker run --detach --name "$container" --publish 127.0.0.1:3000:3000 "$IMAGE:$GITHUB_SHA"
+
+          status="$(timeout 60s curl --fail --silent --show-error --max-time 5 \
+            --retry 60 --retry-delay 1 --retry-connrefused \
+            --output "$home_html" --write-out '%{http_code}' "$base_url/")"
+          if [[ "$status" != 200 ]] || ! grep -Fq 'Signorge' "$home_html"; then
+            echo 'The homepage did not return the expected HTML' >&2
+            exit 1
+          fi
+
+          css_path="$(grep -oE '/_next/static/[^"<>?[:space:]]+\.css' "$home_html" | sed -n '1p')"
+          for path in /logo/signorge-logo-primary.svg "$css_path"; do
+            status="$(curl --fail --silent --show-error --max-time 10 \
+              --output /dev/null --write-out '%{http_code}' "$base_url$path")"
+            if [[ "$status" != 200 ]]; then
+              echo "Expected HTTP 200 for $path, got $status" >&2
+              exit 1
+            fi
+          done
+
+      - name: Log in to GHCR
+        uses: docker/login-action@8aa5831fb8d48d8f76594c7ddde61ae58019f550 # v4.8.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish the validated image
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          main_ref="repos/$GITHUB_REPOSITORY/git/ref/heads/main"
+          main_sha="$(gh api "$main_ref" --jq '.object.sha')"
+          if [[ "$main_sha" != "$GITHUB_SHA" ]]; then
+            echo '::notice::A newer commit is on main. Skipping image publication.'
+            exit 0
+          fi
+
+          docker push "$IMAGE:$GITHUB_SHA"
+
+          # The SHA upload may take long enough for another push to reach main.
+          main_sha="$(gh api "$main_ref" --jq '.object.sha')"
+          if [[ "$main_sha" != "$GITHUB_SHA" ]]; then
+            echo '::notice::main changed during publication. Skipping the latest tag.'
+            exit 0
+          fi
+
+          docker tag "$IMAGE:$GITHUB_SHA" "$IMAGE:latest"
+          docker push "$IMAGE:latest"
