@@ -21,14 +21,18 @@ cypress/
 playwright-report/
 test-results/
 .vitest/
+*.report.html
 
-# Environment files (avoid leaking secrets into the build context)
-.env
-.env*
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Environment files and credentials
+**/.env*
+**/.npmrc
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/.aws
+**/.ssh
+**/.docker
 
 # Debug and log files
 npm-debug.log*
@@ -82,8 +86,7 @@ Jenkinsfile
 .tmp/
 .temp/
 
-# Sensitive or dev-only config (optional; omit if your build needs these)
-.pem
+# Development configuration
 .editorconfig
 .prettierrc*
 .eslintrc*
