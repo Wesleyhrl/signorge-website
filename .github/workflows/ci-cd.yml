@@ -74,7 +74,7 @@ jobs:
           docker run --detach --name "$container" --publish 127.0.0.1:3000:3000 "$IMAGE:$GITHUB_SHA"
 
           status="$(timeout 60s curl --fail --silent --show-error --max-time 5 \
-            --retry 60 --retry-delay 1 --retry-connrefused \
+            --retry 60 --retry-delay 1 --retry-all-errors \
             --output "$home_html" --write-out '%{http_code}' "$base_url/")"
           if [[ "$status" != 200 ]] || ! grep -Fq 'Signorge' "$home_html"; then
             echo 'The homepage did not return the expected HTML' >&2
